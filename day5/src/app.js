@@ -7,6 +7,10 @@ app.use(express.json())
 
 const notes=[];
 
+app.get('/',(req,res)=>{
+       res.send("hello world")
+})
+
 app.post('/notes',(req,res)=>{
        console.log(req.body)
        notes.push(req.body)
